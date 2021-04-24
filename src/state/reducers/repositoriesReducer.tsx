@@ -20,7 +20,7 @@ const reducer = (state: RepositoriesState = initialState, action: Actions) => {
     case ActionType.SEARCH_REPOSITORIES_SUCCESS:
       return { loading: false, error: null, data: action.payload };
     case ActionType.SEARCH_REPOSITORIES_ERROR:
-      return { loading: true, error: action.payload, data: [] };
+      return { loading: false, error: action.payload, data: [] };
     default:
       return state;
   }

@@ -21,7 +21,7 @@ const RepositoriesList: React.FC = () => {
 
       {loading && <p>loding...</p>}
       {error && <p>{error}</p>}
-      {data.length > 0 && data.map((name: string) => <p>{name}</p>)}
+      {!loading && !error && data.map((name: string) => <p>{name}</p>)}
     </div>
   );
 };
